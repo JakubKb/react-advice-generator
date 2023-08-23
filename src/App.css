@@ -25,11 +25,13 @@ body {
 
 .container {
   background-color: var(--Dark-Grayish-Blue);
-  height: 300px;
-  width: 380px;
+  height: 330px;
+  width: 400px;
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
 }
 
 .container p {
@@ -50,4 +52,17 @@ body {
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 20px;
+  font-family: "Manrope", sans-serif;
+}
+
+.divider {
+  display: flex;
+  margin-top: 20px;
+}
+
+.divider-wrapper {
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
