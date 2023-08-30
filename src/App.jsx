@@ -1,5 +1,6 @@
 import "./App.css";
 import patternDivider from "./assets/pattern-divider-mobile.svg";
+import iconDice from "./assets/icon-dice.svg";
 
 function App() {
   return (
@@ -21,6 +22,11 @@ function AppContainer() {
       </span>
       <span className="divider-wrapper">
         <img src={patternDivider} className="divider" />
+      </span>
+      <span className="btn-wrapper">
+        <button className="dice-btn">
+          <img src={iconDice} alt="Dice icon" />
+        </button>
       </span>
     </div>
   );
