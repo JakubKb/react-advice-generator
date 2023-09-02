@@ -1,5 +1,6 @@
 
 # Frontend Mentor Advice Generator
+[Live version](https://warm-unicorn-ec7a18.netlify.app/)
 
 Simple advice generator app from frontend mentor, made with [React.](https://react.dev/)
 
