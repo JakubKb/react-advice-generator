@@ -13,6 +13,7 @@ function App() {
 
 function AppContainer() {
   const [advice, setAdvice] = useState("");
+  const [adviceId, setAdviceId] = useState("");
 
   useEffect(() => {
     fetchAdviceData();
@@ -23,6 +24,7 @@ function AppContainer() {
       .then((response) => response.json())
       .then((data) => {
         setAdvice(data.slip.advice);
+        setAdviceId(data.slip.id);
       })
       .catch((error) => {
         console.error("Error fetching advice:", error);
@@ -31,17 +33,17 @@ function AppContainer() {
 
   return (
     <div className="container">
-      <h1>Advice #117</h1>
+      <h1>Advice #{adviceId}</h1>
       <span className="p-wrapper">
-        <p>{advice ?? "A piece of advice is loading..."}</p>
+        <p>"{advice ?? "A piece of advice is loading..."}"</p>
       </span>
-      <span className="divider-wrapper">
+      <span className="lower-wrapper">
         <img src={patternDivider} alt="Pattern Divider" className="divider" />
-      </span>
-      <span className="btn-wrapper">
-        <button className="dice-btn" onClick={fetchAdviceData}>
-          <img src={iconDice} alt="Dice icon" />
-        </button>
+        <span className="btn-wrapper">
+          <button className="dice-btn" onClick={fetchAdviceData}>
+            <img src={iconDice} alt="Dice icon" />
+          </button>
+        </span>
       </span>
     </div>
   );
